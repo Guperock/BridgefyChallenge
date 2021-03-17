@@ -1,0 +1,788 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		303A6F158BF63C6880509B13 /* Pods_BridgefyChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188340D3EC1578A492BC8674 /* Pods_BridgefyChallengeTests.framework */; };
+		678DB36B26017C490054B3A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678DB36A26017C490054B3A8 /* AppDelegate.swift */; };
+		678DB37426017C4D0054B3A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 678DB37326017C4D0054B3A8 /* Assets.xcassets */; };
+		678DB37726017C4D0054B3A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 678DB37526017C4D0054B3A8 /* LaunchScreen.storyboard */; };
+		678DB38226017C4D0054B3A8 /* BridgefyChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678DB38126017C4D0054B3A8 /* BridgefyChallengeTests.swift */; };
+		678DB38D26017C4D0054B3A8 /* BridgefyChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678DB38C26017C4D0054B3A8 /* BridgefyChallengeUITests.swift */; };
+		678DB3B3260181810054B3A8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678DB3B1260181810054B3A8 /* LoginViewController.swift */; };
+		678DB3B4260181810054B3A8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678DB3B2260181810054B3A8 /* LoginViewController.xib */; };
+		678DB3C0260189670054B3A8 /* UnderLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678DB3BF260189670054B3A8 /* UnderLineTextField.swift */; };
+		678DB3D3260190E80054B3A8 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678DB3D2260190E80054B3A8 /* LoginPresenter.swift */; };
+		678DB3D8260191080054B3A8 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678DB3D7260191080054B3A8 /* LoginInteractor.swift */; };
+		678DB3DD260191150054B3A8 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678DB3DC260191150054B3A8 /* LoginRouter.swift */; };
+		678DB3E2260191260054B3A8 /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678DB3E1260191260054B3A8 /* LoginEntity.swift */; };
+		678DB3EA260191E20054B3A8 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678DB3E9260191E20054B3A8 /* LoginProtocols.swift */; };
+		916ABBFD8B013B3B5694989E /* Pods_BridgefyChallenge_BridgefyChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC08AAA607C3BA3F426C3E1 /* Pods_BridgefyChallenge_BridgefyChallengeUITests.framework */; };
+		B2BFA6B47727D810ABC4365D /* Pods_BridgefyChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 583E367B4EF4F244D9533F6C /* Pods_BridgefyChallenge.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		678DB37E26017C4D0054B3A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 678DB35F26017C490054B3A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 678DB36626017C490054B3A8;
+			remoteInfo = BridgefyChallenge;
+		};
+		678DB38926017C4D0054B3A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 678DB35F26017C490054B3A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 678DB36626017C490054B3A8;
+			remoteInfo = BridgefyChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		188340D3EC1578A492BC8674 /* Pods_BridgefyChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BridgefyChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		583E367B4EF4F244D9533F6C /* Pods_BridgefyChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BridgefyChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		656989DA2B1FAD1E6185E7D6 /* Pods-BridgefyChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BridgefyChallenge.debug.xcconfig"; path = "Target Support Files/Pods-BridgefyChallenge/Pods-BridgefyChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		678DB36726017C490054B3A8 /* BridgefyChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BridgefyChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		678DB36A26017C490054B3A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		678DB37326017C4D0054B3A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		678DB37626017C4D0054B3A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		678DB37826017C4D0054B3A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		678DB37D26017C4D0054B3A8 /* BridgefyChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BridgefyChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		678DB38126017C4D0054B3A8 /* BridgefyChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgefyChallengeTests.swift; sourceTree = "<group>"; };
+		678DB38326017C4D0054B3A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		678DB38826017C4D0054B3A8 /* BridgefyChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BridgefyChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		678DB38C26017C4D0054B3A8 /* BridgefyChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgefyChallengeUITests.swift; sourceTree = "<group>"; };
+		678DB38E26017C4D0054B3A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		678DB3B1260181810054B3A8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		678DB3B2260181810054B3A8 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		678DB3BF260189670054B3A8 /* UnderLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLineTextField.swift; sourceTree = "<group>"; };
+		678DB3D2260190E80054B3A8 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		678DB3D7260191080054B3A8 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		678DB3DC260191150054B3A8 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		678DB3E1260191260054B3A8 /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
+		678DB3E9260191E20054B3A8 /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
+		6A233A6323F798ED45BFB7E8 /* Pods-BridgefyChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BridgefyChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-BridgefyChallengeTests/Pods-BridgefyChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		B5FE82F6717DC3EC92FE744A /* Pods-BridgefyChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BridgefyChallenge.release.xcconfig"; path = "Target Support Files/Pods-BridgefyChallenge/Pods-BridgefyChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		B87388A553E0D6C4F07F3037 /* Pods-BridgefyChallenge-BridgefyChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BridgefyChallenge-BridgefyChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-BridgefyChallenge-BridgefyChallengeUITests/Pods-BridgefyChallenge-BridgefyChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CB69318B5E0B2AAE0831D0A1 /* Pods-BridgefyChallenge-BridgefyChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BridgefyChallenge-BridgefyChallengeUITests.debug.xcconfig"; path = "Target Support Files/Pods-BridgefyChallenge-BridgefyChallengeUITests/Pods-BridgefyChallenge-BridgefyChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DFB6057CB2FCB8BDF522BA19 /* Pods-BridgefyChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BridgefyChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-BridgefyChallengeTests/Pods-BridgefyChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EEC08AAA607C3BA3F426C3E1 /* Pods_BridgefyChallenge_BridgefyChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BridgefyChallenge_BridgefyChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		678DB36426017C490054B3A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2BFA6B47727D810ABC4365D /* Pods_BridgefyChallenge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		678DB37A26017C4D0054B3A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				303A6F158BF63C6880509B13 /* Pods_BridgefyChallengeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		678DB38526017C4D0054B3A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				916ABBFD8B013B3B5694989E /* Pods_BridgefyChallenge_BridgefyChallengeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2AB0C2E90E86666A8DC5D006 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				656989DA2B1FAD1E6185E7D6 /* Pods-BridgefyChallenge.debug.xcconfig */,
+				B5FE82F6717DC3EC92FE744A /* Pods-BridgefyChallenge.release.xcconfig */,
+				CB69318B5E0B2AAE0831D0A1 /* Pods-BridgefyChallenge-BridgefyChallengeUITests.debug.xcconfig */,
+				B87388A553E0D6C4F07F3037 /* Pods-BridgefyChallenge-BridgefyChallengeUITests.release.xcconfig */,
+				DFB6057CB2FCB8BDF522BA19 /* Pods-BridgefyChallengeTests.debug.xcconfig */,
+				6A233A6323F798ED45BFB7E8 /* Pods-BridgefyChallengeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		678DB35E26017C490054B3A8 = {
+			isa = PBXGroup;
+			children = (
+				678DB36926017C490054B3A8 /* BridgefyChallenge */,
+				678DB38026017C4D0054B3A8 /* BridgefyChallengeTests */,
+				678DB38B26017C4D0054B3A8 /* BridgefyChallengeUITests */,
+				678DB36826017C490054B3A8 /* Products */,
+				2AB0C2E90E86666A8DC5D006 /* Pods */,
+				F263C0F65D0900CF52D708C4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		678DB36826017C490054B3A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				678DB36726017C490054B3A8 /* BridgefyChallenge.app */,
+				678DB37D26017C4D0054B3A8 /* BridgefyChallengeTests.xctest */,
+				678DB38826017C4D0054B3A8 /* BridgefyChallengeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		678DB36926017C490054B3A8 /* BridgefyChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				678DB3BE260189350054B3A8 /* CustomUI */,
+				678DB3AF260181100054B3A8 /* Modules */,
+				678DB36A26017C490054B3A8 /* AppDelegate.swift */,
+				678DB37326017C4D0054B3A8 /* Assets.xcassets */,
+				678DB37526017C4D0054B3A8 /* LaunchScreen.storyboard */,
+				678DB37826017C4D0054B3A8 /* Info.plist */,
+			);
+			path = BridgefyChallenge;
+			sourceTree = "<group>";
+		};
+		678DB38026017C4D0054B3A8 /* BridgefyChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				678DB38126017C4D0054B3A8 /* BridgefyChallengeTests.swift */,
+				678DB38326017C4D0054B3A8 /* Info.plist */,
+			);
+			path = BridgefyChallengeTests;
+			sourceTree = "<group>";
+		};
+		678DB38B26017C4D0054B3A8 /* BridgefyChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				678DB38C26017C4D0054B3A8 /* BridgefyChallengeUITests.swift */,
+				678DB38E26017C4D0054B3A8 /* Info.plist */,
+			);
+			path = BridgefyChallengeUITests;
+			sourceTree = "<group>";
+		};
+		678DB3AF260181100054B3A8 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				678DB3B0260181180054B3A8 /* Loggin */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		678DB3B0260181180054B3A8 /* Loggin */ = {
+			isa = PBXGroup;
+			children = (
+				678DB3E1260191260054B3A8 /* LoginEntity.swift */,
+				678DB3D7260191080054B3A8 /* LoginInteractor.swift */,
+				678DB3D2260190E80054B3A8 /* LoginPresenter.swift */,
+				678DB3E9260191E20054B3A8 /* LoginProtocols.swift */,
+				678DB3DC260191150054B3A8 /* LoginRouter.swift */,
+				678DB3B1260181810054B3A8 /* LoginViewController.swift */,
+				678DB3B2260181810054B3A8 /* LoginViewController.xib */,
+			);
+			path = Loggin;
+			sourceTree = "<group>";
+		};
+		678DB3BE260189350054B3A8 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				678DB3BF260189670054B3A8 /* UnderLineTextField.swift */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		F263C0F65D0900CF52D708C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				583E367B4EF4F244D9533F6C /* Pods_BridgefyChallenge.framework */,
+				EEC08AAA607C3BA3F426C3E1 /* Pods_BridgefyChallenge_BridgefyChallengeUITests.framework */,
+				188340D3EC1578A492BC8674 /* Pods_BridgefyChallengeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		678DB36626017C490054B3A8 /* BridgefyChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 678DB39126017C4D0054B3A8 /* Build configuration list for PBXNativeTarget "BridgefyChallenge" */;
+			buildPhases = (
+				D111BA6B08F49D838949EAE7 /* [CP] Check Pods Manifest.lock */,
+				678DB36326017C490054B3A8 /* Sources */,
+				678DB36426017C490054B3A8 /* Frameworks */,
+				678DB36526017C490054B3A8 /* Resources */,
+				43122DE6D7FB83032BC6B015 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BridgefyChallenge;
+			productName = BridgefyChallenge;
+			productReference = 678DB36726017C490054B3A8 /* BridgefyChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		678DB37C26017C4D0054B3A8 /* BridgefyChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 678DB39426017C4D0054B3A8 /* Build configuration list for PBXNativeTarget "BridgefyChallengeTests" */;
+			buildPhases = (
+				9ABC0408CA5407B5568E8749 /* [CP] Check Pods Manifest.lock */,
+				678DB37926017C4D0054B3A8 /* Sources */,
+				678DB37A26017C4D0054B3A8 /* Frameworks */,
+				678DB37B26017C4D0054B3A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				678DB37F26017C4D0054B3A8 /* PBXTargetDependency */,
+			);
+			name = BridgefyChallengeTests;
+			productName = BridgefyChallengeTests;
+			productReference = 678DB37D26017C4D0054B3A8 /* BridgefyChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		678DB38726017C4D0054B3A8 /* BridgefyChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 678DB39726017C4D0054B3A8 /* Build configuration list for PBXNativeTarget "BridgefyChallengeUITests" */;
+			buildPhases = (
+				AD6B0AA18F05659753805976 /* [CP] Check Pods Manifest.lock */,
+				678DB38426017C4D0054B3A8 /* Sources */,
+				678DB38526017C4D0054B3A8 /* Frameworks */,
+				678DB38626017C4D0054B3A8 /* Resources */,
+				2D93080193AEC7471384670C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				678DB38A26017C4D0054B3A8 /* PBXTargetDependency */,
+			);
+			name = BridgefyChallengeUITests;
+			productName = BridgefyChallengeUITests;
+			productReference = 678DB38826017C4D0054B3A8 /* BridgefyChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		678DB35F26017C490054B3A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					678DB36626017C490054B3A8 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					678DB37C26017C4D0054B3A8 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 678DB36626017C490054B3A8;
+					};
+					678DB38726017C4D0054B3A8 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 678DB36626017C490054B3A8;
+					};
+				};
+			};
+			buildConfigurationList = 678DB36226017C490054B3A8 /* Build configuration list for PBXProject "BridgefyChallenge" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 678DB35E26017C490054B3A8;
+			productRefGroup = 678DB36826017C490054B3A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				678DB36626017C490054B3A8 /* BridgefyChallenge */,
+				678DB37C26017C4D0054B3A8 /* BridgefyChallengeTests */,
+				678DB38726017C4D0054B3A8 /* BridgefyChallengeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		678DB36526017C490054B3A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				678DB37726017C4D0054B3A8 /* LaunchScreen.storyboard in Resources */,
+				678DB37426017C4D0054B3A8 /* Assets.xcassets in Resources */,
+				678DB3B4260181810054B3A8 /* LoginViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		678DB37B26017C4D0054B3A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		678DB38626017C4D0054B3A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D93080193AEC7471384670C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BridgefyChallenge-BridgefyChallengeUITests/Pods-BridgefyChallenge-BridgefyChallengeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BridgefyChallenge-BridgefyChallengeUITests/Pods-BridgefyChallenge-BridgefyChallengeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BridgefyChallenge-BridgefyChallengeUITests/Pods-BridgefyChallenge-BridgefyChallengeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43122DE6D7FB83032BC6B015 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BridgefyChallenge/Pods-BridgefyChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BridgefyChallenge/Pods-BridgefyChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BridgefyChallenge/Pods-BridgefyChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9ABC0408CA5407B5568E8749 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BridgefyChallengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD6B0AA18F05659753805976 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BridgefyChallenge-BridgefyChallengeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D111BA6B08F49D838949EAE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BridgefyChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		678DB36326017C490054B3A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				678DB3D3260190E80054B3A8 /* LoginPresenter.swift in Sources */,
+				678DB3C0260189670054B3A8 /* UnderLineTextField.swift in Sources */,
+				678DB3DD260191150054B3A8 /* LoginRouter.swift in Sources */,
+				678DB3B3260181810054B3A8 /* LoginViewController.swift in Sources */,
+				678DB3D8260191080054B3A8 /* LoginInteractor.swift in Sources */,
+				678DB3EA260191E20054B3A8 /* LoginProtocols.swift in Sources */,
+				678DB3E2260191260054B3A8 /* LoginEntity.swift in Sources */,
+				678DB36B26017C490054B3A8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		678DB37926017C4D0054B3A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				678DB38226017C4D0054B3A8 /* BridgefyChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		678DB38426017C4D0054B3A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				678DB38D26017C4D0054B3A8 /* BridgefyChallengeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		678DB37F26017C4D0054B3A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 678DB36626017C490054B3A8 /* BridgefyChallenge */;
+			targetProxy = 678DB37E26017C4D0054B3A8 /* PBXContainerItemProxy */;
+		};
+		678DB38A26017C4D0054B3A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 678DB36626017C490054B3A8 /* BridgefyChallenge */;
+			targetProxy = 678DB38926017C4D0054B3A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		678DB37526017C4D0054B3A8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				678DB37626017C4D0054B3A8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		678DB38F26017C4D0054B3A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		678DB39026017C4D0054B3A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		678DB39226017C4D0054B3A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 656989DA2B1FAD1E6185E7D6 /* Pods-BridgefyChallenge.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3L2F869UH3;
+				INFOPLIST_FILE = BridgefyChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.guperock.BridgefyChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		678DB39326017C4D0054B3A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5FE82F6717DC3EC92FE744A /* Pods-BridgefyChallenge.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3L2F869UH3;
+				INFOPLIST_FILE = BridgefyChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.guperock.BridgefyChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		678DB39526017C4D0054B3A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFB6057CB2FCB8BDF522BA19 /* Pods-BridgefyChallengeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3L2F869UH3;
+				INFOPLIST_FILE = BridgefyChallengeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.guperock.BridgefyChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BridgefyChallenge.app/BridgefyChallenge";
+			};
+			name = Debug;
+		};
+		678DB39626017C4D0054B3A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A233A6323F798ED45BFB7E8 /* Pods-BridgefyChallengeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3L2F869UH3;
+				INFOPLIST_FILE = BridgefyChallengeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.guperock.BridgefyChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BridgefyChallenge.app/BridgefyChallenge";
+			};
+			name = Release;
+		};
+		678DB39826017C4D0054B3A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB69318B5E0B2AAE0831D0A1 /* Pods-BridgefyChallenge-BridgefyChallengeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3L2F869UH3;
+				INFOPLIST_FILE = BridgefyChallengeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.guperock.BridgefyChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BridgefyChallenge;
+			};
+			name = Debug;
+		};
+		678DB39926017C4D0054B3A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B87388A553E0D6C4F07F3037 /* Pods-BridgefyChallenge-BridgefyChallengeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3L2F869UH3;
+				INFOPLIST_FILE = BridgefyChallengeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.guperock.BridgefyChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BridgefyChallenge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		678DB36226017C490054B3A8 /* Build configuration list for PBXProject "BridgefyChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				678DB38F26017C4D0054B3A8 /* Debug */,
+				678DB39026017C4D0054B3A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		678DB39126017C4D0054B3A8 /* Build configuration list for PBXNativeTarget "BridgefyChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				678DB39226017C4D0054B3A8 /* Debug */,
+				678DB39326017C4D0054B3A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		678DB39426017C4D0054B3A8 /* Build configuration list for PBXNativeTarget "BridgefyChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				678DB39526017C4D0054B3A8 /* Debug */,
+				678DB39626017C4D0054B3A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		678DB39726017C4D0054B3A8 /* Build configuration list for PBXNativeTarget "BridgefyChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				678DB39826017C4D0054B3A8 /* Debug */,
+				678DB39926017C4D0054B3A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 678DB35F26017C490054B3A8 /* Project object */;
+}
