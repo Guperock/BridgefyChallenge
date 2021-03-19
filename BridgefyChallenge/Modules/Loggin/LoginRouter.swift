@@ -32,6 +32,8 @@ public class LoginRouter {
 
 extension LoginRouter: LoginPresenterToRouter {
     func goToDashboard() {
-        
+        let dashboard = TabContainerRouter.createTabContainer()
+        dashboard.modalPresentationStyle = .overFullScreen
+        self.view.present(dashboard, animated: true, completion: nil)
     }
 }

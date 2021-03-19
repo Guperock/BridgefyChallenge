@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountriesViewController" customModule="BridgefyChallenge" customModuleProvider="target">
+            <connections>
+                <outlet property="srcBar" destination="dlM-yp-wZk" id="w4h-VR-rYT"/>
+                <outlet property="tblCountries" destination="Sjk-dL-Z1j" id="LRa-YI-Ewy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JeY-d3-oHF">
+                    <rect key="frame" x="0.0" y="44" width="414" height="107.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Z2g-DO-dbo">
+                            <rect key="frame" x="10" y="10" width="394" height="87.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Countries" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jut-wY-Lyn">
+                                    <rect key="frame" x="0.0" y="0.0" width="394" height="31.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="dlM-yp-wZk">
+                                    <rect key="frame" x="0.0" y="31.5" width="394" height="56"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.97636479139999999" green="0.97653168440000004" blue="0.9763541818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Z2g-DO-dbo" secondAttribute="trailing" constant="10" id="0pZ-C8-SSY"/>
+                        <constraint firstItem="Z2g-DO-dbo" firstAttribute="top" secondItem="JeY-d3-oHF" secondAttribute="top" constant="10" id="2zg-bc-dWI"/>
+                        <constraint firstItem="Z2g-DO-dbo" firstAttribute="leading" secondItem="JeY-d3-oHF" secondAttribute="leading" constant="10" id="HdH-IO-o4c"/>
+                        <constraint firstAttribute="bottom" secondItem="Z2g-DO-dbo" secondAttribute="bottom" constant="10" id="YWb-Qh-sHA"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sjk-dL-Z1j">
+                    <rect key="frame" x="0.0" y="151.5" width="414" height="710.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Sjk-dL-Z1j" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="F7L-Ci-DsU"/>
+                <constraint firstItem="JeY-d3-oHF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ILP-aP-UNY"/>
+                <constraint firstItem="Sjk-dL-Z1j" firstAttribute="top" secondItem="JeY-d3-oHF" secondAttribute="bottom" id="YyG-RJ-OLB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JeY-d3-oHF" secondAttribute="trailing" id="eyn-uJ-Dyz"/>
+                <constraint firstItem="JeY-d3-oHF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sCR-k2-Rhz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Sjk-dL-Z1j" secondAttribute="bottom" id="zME-ix-pIH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Sjk-dL-Z1j" secondAttribute="trailing" id="zVj-ql-BCU"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="115"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
