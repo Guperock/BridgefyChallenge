@@ -34,6 +34,20 @@
 		678DB3DD260191150054B3A8 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678DB3DC260191150054B3A8 /* LoginRouter.swift */; };
 		678DB3E2260191260054B3A8 /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678DB3E1260191260054B3A8 /* LoginEntity.swift */; };
 		678DB3EA260191E20054B3A8 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678DB3E9260191E20054B3A8 /* LoginProtocols.swift */; };
+		67E478802605925400C09300 /* CountryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E4787E2605925400C09300 /* CountryDetailViewController.swift */; };
+		67E478812605925400C09300 /* CountryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E4787F2605925400C09300 /* CountryDetailViewController.xib */; };
+		67E478862605A3D000C09300 /* FloatinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E478852605A3D000C09300 /* FloatinView.swift */; };
+		67E4788B2605A4DE00C09300 /* CountryDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E4788A2605A4DE00C09300 /* CountryDetailRouter.swift */; };
+		67E478922605AA7C00C09300 /* BorderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E478902605AA7C00C09300 /* BorderCollectionViewCell.swift */; };
+		67E478932605AA7C00C09300 /* BorderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E478912605AA7C00C09300 /* BorderCollectionViewCell.xib */; };
+		67E478A02605AC0A00C09300 /* BordersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E4789F2605AC0A00C09300 /* BordersCollectionView.swift */; };
+		67E478A82605AEF200C09300 /* CountryDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E478A72605AEF200C09300 /* CountryDetailPresenter.swift */; };
+		67E478AD2605AF1400C09300 /* CountryDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E478AC2605AF1400C09300 /* CountryDetailInteractor.swift */; };
+		67E478B22605AF3F00C09300 /* CountryDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E478B12605AF3F00C09300 /* CountryDetailEntity.swift */; };
+		67E478B72605B16E00C09300 /* CountryDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E478B62605B16E00C09300 /* CountryDetailProtocols.swift */; };
+		67E478C22605BBE500C09300 /* IndicatorImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E478C12605BBE500C09300 /* IndicatorImageView.swift */; };
+		67E478C72605C99100C09300 /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E478C62605C99100C09300 /* UILabelExtensions.swift */; };
+		67E478CD2605D83A00C09300 /* IsoCountryCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E478CC2605D83A00C09300 /* IsoCountryCodes.swift */; };
 		916ABBFD8B013B3B5694989E /* Pods_BridgefyChallenge_BridgefyChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC08AAA607C3BA3F426C3E1 /* Pods_BridgefyChallenge_BridgefyChallengeUITests.framework */; };
 		B2BFA6B47727D810ABC4365D /* Pods_BridgefyChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 583E367B4EF4F244D9533F6C /* Pods_BridgefyChallenge.framework */; };
 /* End PBXBuildFile section */
@@ -91,6 +105,20 @@
 		678DB3DC260191150054B3A8 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		678DB3E1260191260054B3A8 /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
 		678DB3E9260191E20054B3A8 /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
+		67E4787E2605925400C09300 /* CountryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewController.swift; sourceTree = "<group>"; };
+		67E4787F2605925400C09300 /* CountryDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryDetailViewController.xib; sourceTree = "<group>"; };
+		67E478852605A3D000C09300 /* FloatinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatinView.swift; sourceTree = "<group>"; };
+		67E4788A2605A4DE00C09300 /* CountryDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailRouter.swift; sourceTree = "<group>"; };
+		67E478902605AA7C00C09300 /* BorderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderCollectionViewCell.swift; sourceTree = "<group>"; };
+		67E478912605AA7C00C09300 /* BorderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BorderCollectionViewCell.xib; sourceTree = "<group>"; };
+		67E4789F2605AC0A00C09300 /* BordersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BordersCollectionView.swift; sourceTree = "<group>"; };
+		67E478A72605AEF200C09300 /* CountryDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailPresenter.swift; sourceTree = "<group>"; };
+		67E478AC2605AF1400C09300 /* CountryDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailInteractor.swift; sourceTree = "<group>"; };
+		67E478B12605AF3F00C09300 /* CountryDetailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailEntity.swift; sourceTree = "<group>"; };
+		67E478B62605B16E00C09300 /* CountryDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailProtocols.swift; sourceTree = "<group>"; };
+		67E478C12605BBE500C09300 /* IndicatorImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorImageView.swift; sourceTree = "<group>"; };
+		67E478C62605C99100C09300 /* UILabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
+		67E478CC2605D83A00C09300 /* IsoCountryCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsoCountryCodes.swift; sourceTree = "<group>"; };
 		6A233A6323F798ED45BFB7E8 /* Pods-BridgefyChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BridgefyChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-BridgefyChallengeTests/Pods-BridgefyChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		B5FE82F6717DC3EC92FE744A /* Pods-BridgefyChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BridgefyChallenge.release.xcconfig"; path = "Target Support Files/Pods-BridgefyChallenge/Pods-BridgefyChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		B87388A553E0D6C4F07F3037 /* Pods-BridgefyChallenge-BridgefyChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BridgefyChallenge-BridgefyChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-BridgefyChallenge-BridgefyChallengeUITests/Pods-BridgefyChallenge-BridgefyChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +180,7 @@
 		674CF5ED26044AB700E83B65 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				67E478CB2605D68100C09300 /* Thirds */,
 				674CF60E26045B2B00E83B65 /* Services */,
 				674CF5EE26044AC500E83B65 /* Extensions */,
 				678DB3BE260189350054B3A8 /* CustomUI */,
@@ -163,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				674CF5EF26044ADC00E83B65 /* UIColorExtensions.swift */,
+				67E478C62605C99100C09300 /* UILabelExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -255,6 +285,7 @@
 		678DB3AF260181100054B3A8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				67E4787D260591DE00C09300 /* CountryDetail */,
 				674CF5F426044BF900E83B65 /* Countries */,
 				674CF5DF2604469100E83B65 /* TabContainer */,
 				678DB3B0260181180054B3A8 /* Loggin */,
@@ -280,8 +311,43 @@
 			isa = PBXGroup;
 			children = (
 				678DB3BF260189670054B3A8 /* UnderLineTextField.swift */,
+				67E478852605A3D000C09300 /* FloatinView.swift */,
+				67E478C12605BBE500C09300 /* IndicatorImageView.swift */,
 			);
 			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		67E4787D260591DE00C09300 /* CountryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				67E478B12605AF3F00C09300 /* CountryDetailEntity.swift */,
+				67E478AC2605AF1400C09300 /* CountryDetailInteractor.swift */,
+				67E478A72605AEF200C09300 /* CountryDetailPresenter.swift */,
+				67E478B62605B16E00C09300 /* CountryDetailProtocols.swift */,
+				67E4788A2605A4DE00C09300 /* CountryDetailRouter.swift */,
+				67E4787E2605925400C09300 /* CountryDetailViewController.swift */,
+				67E4787F2605925400C09300 /* CountryDetailViewController.xib */,
+				67E4788F2605AA6500C09300 /* Subviews */,
+			);
+			path = CountryDetail;
+			sourceTree = "<group>";
+		};
+		67E4788F2605AA6500C09300 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				67E478902605AA7C00C09300 /* BorderCollectionViewCell.swift */,
+				67E478912605AA7C00C09300 /* BorderCollectionViewCell.xib */,
+				67E4789F2605AC0A00C09300 /* BordersCollectionView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		67E478CB2605D68100C09300 /* Thirds */ = {
+			isa = PBXGroup;
+			children = (
+				67E478CC2605D83A00C09300 /* IsoCountryCodes.swift */,
+			);
+			path = Thirds;
 			sourceTree = "<group>";
 		};
 		F263C0F65D0900CF52D708C4 /* Frameworks */ = {
@@ -404,9 +470,11 @@
 			files = (
 				678DB37726017C4D0054B3A8 /* LaunchScreen.storyboard in Resources */,
 				678DB37426017C4D0054B3A8 /* Assets.xcassets in Resources */,
+				67E478812605925400C09300 /* CountryDetailViewController.xib in Resources */,
 				678DB3B4260181810054B3A8 /* LoginViewController.xib in Resources */,
 				674CF5F826044C2300E83B65 /* CountriesViewController.xib in Resources */,
 				674CF6002604512500E83B65 /* CountriesTableViewCell.xib in Resources */,
+				67E478932605AA7C00C09300 /* BorderCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,23 +604,35 @@
 			files = (
 				674CF5E9260448C700E83B65 /* TabContainerRouter.swift in Sources */,
 				674CF5FF2604512500E83B65 /* CountriesTableViewCell.swift in Sources */,
+				67E478C72605C99100C09300 /* UILabelExtensions.swift in Sources */,
 				678DB3D3260190E80054B3A8 /* LoginPresenter.swift in Sources */,
+				67E478B72605B16E00C09300 /* CountryDetailProtocols.swift in Sources */,
 				674CF60A260459C700E83B65 /* CountriesRouter.swift in Sources */,
+				67E478862605A3D000C09300 /* FloatinView.swift in Sources */,
+				67E478C22605BBE500C09300 /* IndicatorImageView.swift in Sources */,
 				674CF6152604607100E83B65 /* CountriesPresenter.swift in Sources */,
 				674CF61026045C4F00E83B65 /* GenericBasicService.swift in Sources */,
+				67E478A02605AC0A00C09300 /* BordersCollectionView.swift in Sources */,
 				678DB3C0260189670054B3A8 /* UnderLineTextField.swift in Sources */,
 				678DB3DD260191150054B3A8 /* LoginRouter.swift in Sources */,
 				674CF6052604538100E83B65 /* CountriesEntity.swift in Sources */,
 				678DB3B3260181810054B3A8 /* LoginViewController.swift in Sources */,
+				67E478B22605AF3F00C09300 /* CountryDetailEntity.swift in Sources */,
 				674CF61F260460AD00E83B65 /* CountriesProtocols.swift in Sources */,
+				67E4788B2605A4DE00C09300 /* CountryDetailRouter.swift in Sources */,
 				678DB3D8260191080054B3A8 /* LoginInteractor.swift in Sources */,
 				674CF5F026044ADD00E83B65 /* UIColorExtensions.swift in Sources */,
 				678DB3EA260191E20054B3A8 /* LoginProtocols.swift in Sources */,
 				678DB3E2260191260054B3A8 /* LoginEntity.swift in Sources */,
 				674CF5E1260446C600E83B65 /* TabContainerViewController.swift in Sources */,
 				674CF61A2604609100E83B65 /* CountriesInteractor.swift in Sources */,
+				67E478AD2605AF1400C09300 /* CountryDetailInteractor.swift in Sources */,
+				67E478CD2605D83A00C09300 /* IsoCountryCodes.swift in Sources */,
 				678DB36B26017C490054B3A8 /* AppDelegate.swift in Sources */,
+				67E478802605925400C09300 /* CountryDetailViewController.swift in Sources */,
 				674CF5F726044C2300E83B65 /* CountriesViewController.swift in Sources */,
+				67E478A82605AEF200C09300 /* CountryDetailPresenter.swift in Sources */,
+				67E478922605AA7C00C09300 /* BorderCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

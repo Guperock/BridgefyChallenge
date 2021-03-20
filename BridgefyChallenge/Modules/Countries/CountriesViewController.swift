@@ -23,6 +23,7 @@ class CountriesViewController: UIViewController {
         self.srcBar.delegate = self
         self.tblCountries.register(UINib(nibName: "CountriesTableViewCell", bundle: .main), forCellReuseIdentifier: CountriesTableViewCell.idCell)
         self.tblCountries.dataSource = self
+        self.tblCountries.delegate = self
         self.presenter?.getAllCountries()
 
     }
@@ -50,10 +51,9 @@ class CountriesViewController: UIViewController {
         self.presenter?.ungroupContries()
     }
 
-
 }
 
-extension CountriesViewController: UITableViewDataSource {
+extension CountriesViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return countriesData.count
@@ -78,6 +78,10 @@ extension CountriesViewController: UITableViewDataSource {
         return self.countriesData[section].region
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let countryCode = self.countriesData[indexPath.section].countries[indexPath.row].alpha2Code
+        self.presenter?.showDetail(countryCode: countryCode)
+    }
 }
 
 extension CountriesViewController: CountriesPresenterToView {

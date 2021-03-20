@@ -15,6 +15,7 @@ class  LoginInteractor {
 
 extension LoginInteractor: LoginPresenterToInteractor {
     func validateCredentials(email: String, password: String) {
+        /*
         guard email.elementsEqual("challenge@bridgefy.me") else {
             self.presenter?.didValidationFails(description: "El correo no esta registrado")
             return
@@ -24,6 +25,7 @@ extension LoginInteractor: LoginPresenterToInteractor {
             self.presenter?.didValidationFails(description: "Contraseña incorrecta")
             return
         }
+ */
         
         self.presenter?.didValidationSuccess()
     }

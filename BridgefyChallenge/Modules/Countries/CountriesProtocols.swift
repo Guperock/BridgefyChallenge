@@ -12,6 +12,7 @@ protocol CountriesViewToPresenter: class {
     func ungroupContries()
     func groupContries()
     func searchCountries(searchText: String?)
+    func showDetail(countryCode: String)
 }
 
 protocol CountriesPresenterToView: class {
@@ -31,7 +32,7 @@ protocol CountriesInteractorToPresenter: class {
 }
 
 protocol CountriesPresenterToRouter: class {
-    
+    func goToCountryDetail(countryCode: String)
 }
 
 

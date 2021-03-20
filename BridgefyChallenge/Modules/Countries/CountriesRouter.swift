@@ -29,5 +29,8 @@ class CountriesRouter {
 }
 
 extension CountriesRouter: CountriesPresenterToRouter {
-    
+    func goToCountryDetail(countryCode: String) {
+        let detailView = CountryDetailRouter.createCountryDetail(countryCode: countryCode)
+        self.view?.parent?.navigationController?.pushViewController(detailView, animated: true)
+    }
 }

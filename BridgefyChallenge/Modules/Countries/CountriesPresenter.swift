@@ -30,6 +30,9 @@ extension CountriesPresenter: CountriesViewToPresenter {
         self.interactor?.searchCountries(searchText: searchText)
     }
     
+    func showDetail(countryCode: String) {
+        self.router?.goToCountryDetail(countryCode: countryCode)
+    }
 }
 
 extension CountriesPresenter: CountriesInteractorToPresenter {

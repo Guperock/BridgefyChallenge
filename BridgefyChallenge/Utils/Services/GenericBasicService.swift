@@ -48,6 +48,23 @@ class GenericBasicService {
             }
         }
     }
+    
+    
+    func getImage(url: String, completionHandler: @escaping (Result<UIImage,GenericErrorService>) -> Void) {
+        AF.request(url).responseData { (response) in
+            switch response.result {
+            case .success(let data):
+                let image = UIImage(data: data) ?? UIImage()
+                DispatchQueue.main.async {
+                    completionHandler(.success(image))
+                }
+            case .failure(_):
+                DispatchQueue.main.async {
+                    completionHandler(.failure(.serviceError))
+                }
+            }
+        }
+    }
 }
 
 
