@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="BridgefyChallenge" customModuleProvider="target">
+            <connections>
+                <outlet property="actIndicator" destination="q1a-Fd-LzJ" id="86b-ac-YaU"/>
+                <outlet property="btnLogin" destination="cgJ-Se-mTZ" id="XVz-AT-i7Q"/>
+                <outlet property="txfEmail" destination="5zG-VJ-y8M" id="s1Q-UX-WWC"/>
+                <outlet property="txfPassword" destination="nhG-Fw-n04" id="vPF-BP-Utx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="9Gs-fY-mUf">
+                    <rect key="frame" x="0.0" y="44" width="414" height="599"/>
+                    <color key="tintColor" name="accent_color"/>
+                </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5zG-VJ-y8M" customClass="UnderLineTextField" customModule="BridgefyChallenge" customModuleProvider="target">
+                    <rect key="frame" x="24" y="643" width="366" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="rLn-QV-3PR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nhG-Fw-n04" customClass="UnderLineTextField" customModule="BridgefyChallenge" customModuleProvider="target">
+                    <rect key="frame" x="24" y="703" width="366" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="0sO-BQ-dsI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgJ-Se-mTZ">
+                    <rect key="frame" x="24" y="783" width="366" height="55"/>
+                    <color key="backgroundColor" name="accent_color"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="KRC-8F-GSE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                    <state key="normal" title="Login">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="onLoginClicked:" destination="-1" eventType="touchUpInside" id="lNe-Hf-Kke"/>
+                    </connections>
+                </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="q1a-Fd-LzJ">
+                    <rect key="frame" x="197" y="800.5" width="20" height="20"/>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="cgJ-Se-mTZ" firstAttribute="trailing" secondItem="nhG-Fw-n04" secondAttribute="trailing" id="5j4-g0-P6l"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cgJ-Se-mTZ" secondAttribute="bottom" constant="24" id="BOZ-2q-JfY"/>
+                <constraint firstItem="9Gs-fY-mUf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="DAI-hA-grT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cgJ-Se-mTZ" secondAttribute="trailing" constant="24" id="HYd-XV-WeC"/>
+                <constraint firstItem="cgJ-Se-mTZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="KUj-BI-MHe"/>
+                <constraint firstItem="nhG-Fw-n04" firstAttribute="top" secondItem="5zG-VJ-y8M" secondAttribute="bottom" constant="20" id="LRL-Xb-93c"/>
+                <constraint firstItem="cgJ-Se-mTZ" firstAttribute="centerY" secondItem="q1a-Fd-LzJ" secondAttribute="centerY" id="LVJ-wv-rkK"/>
+                <constraint firstItem="cgJ-Se-mTZ" firstAttribute="centerX" secondItem="q1a-Fd-LzJ" secondAttribute="centerX" id="N0n-Br-gw3"/>
+                <constraint firstItem="cgJ-Se-mTZ" firstAttribute="leading" secondItem="nhG-Fw-n04" secondAttribute="leading" id="PcK-60-Ws5"/>
+                <constraint firstItem="9Gs-fY-mUf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XIc-CP-Snw"/>
+                <constraint firstItem="nhG-Fw-n04" firstAttribute="leading" secondItem="5zG-VJ-y8M" secondAttribute="leading" id="XVG-xh-e7j"/>
+                <constraint firstItem="nhG-Fw-n04" firstAttribute="trailing" secondItem="5zG-VJ-y8M" secondAttribute="trailing" id="bnm-L9-Nnl"/>
+                <constraint firstItem="5zG-VJ-y8M" firstAttribute="top" secondItem="9Gs-fY-mUf" secondAttribute="bottom" id="dr8-w4-s1U"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9Gs-fY-mUf" secondAttribute="trailing" id="rDK-G2-u8l"/>
+                <constraint firstItem="cgJ-Se-mTZ" firstAttribute="top" secondItem="nhG-Fw-n04" secondAttribute="bottom" constant="40" id="tWJ-8q-trl"/>
+            </constraints>
+            <point key="canvasLocation" x="-146.37681159420291" y="108.48214285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Icon" width="100" height="100"/>
+        <namedColor name="accent_color">
+            <color red="0.93333333333333335" green="0.36078431372549019" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
