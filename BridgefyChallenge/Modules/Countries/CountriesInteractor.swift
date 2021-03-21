@@ -22,6 +22,7 @@ class CountriesInteractor {
 extension CountriesInteractor: CountriesPresenterToInteractor {
     
     func retriveAllCountries() {
+        //Get countries list from service
         self.service.get(url: service.basicURL + "all", expectedResponse: [BasicCountry].self) { [weak self] (result) in
             switch result {
             case .success(let allCountries):
@@ -33,6 +34,7 @@ extension CountriesInteractor: CountriesPresenterToInteractor {
     }
     
     func groupContries() {
+        //Create group from all countries
         var countriesGroups: [CountriesGroup] = []
         for country in self.allCountries {
             if let countryGroup = countriesGroups.first(where: {$0.region == country.region}) {
@@ -47,10 +49,12 @@ extension CountriesInteractor: CountriesPresenterToInteractor {
     }
     
     func ungroupContries() {
+        //Return one group with all countries
         self.presenter?.updateCountries(countriesGroups: [CountriesGroup(region: nil, countries: self.allCountries)])
     }
     
     func searchCountries(searchText: String?) {
+        //Get all countries that contains the search text in your name, alpha2code or alpha3code
         if let searchText = searchText?.uppercased(), !searchText.isEmpty{
             let countriesFiltered = self.allCountries.filter({$0.name.uppercased().contains(searchText) || $0.alpha2Code.contains(searchText) || $0.alpha3Code.contains(searchText)})
             self.presenter?.updateCountries(countriesGroups: [CountriesGroup(region: nil, countries: countriesFiltered)])

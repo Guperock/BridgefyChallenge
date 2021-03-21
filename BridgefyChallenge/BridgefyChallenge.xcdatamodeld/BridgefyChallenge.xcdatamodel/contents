@@ -4,16 +4,16 @@
         <attribute name="alpha2Code" attributeType="String"/>
         <attribute name="alpha3Code" attributeType="String"/>
         <attribute name="area" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="borders" attributeType="Transformable" valueTransformerName=""/>
-        <attribute name="callingCodes" attributeType="Transformable"/>
+        <attribute name="borders" attributeType="Transformable" valueTransformerName="" customClassName="[String]"/>
+        <attribute name="callingCodes" attributeType="Transformable" valueTransformerName="[String]" customClassName="[String]"/>
         <attribute name="capital" attributeType="String"/>
-        <attribute name="currencies" attributeType="Transformable"/>
-        <attribute name="languages" attributeType="Transformable"/>
-        <attribute name="latlng" attributeType="Transformable"/>
+        <attribute name="currencies" attributeType="Transformable" valueTransformerName="[String]" customClassName="[String]"/>
+        <attribute name="languages" attributeType="Transformable" valueTransformerName="[String]" customClassName="[String]"/>
+        <attribute name="latlng" attributeType="Transformable" valueTransformerName="[Double]" customClassName="[Double]"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="population" attributeType="Integer 64" usesScalarValueType="YES"/>
         <attribute name="subregion" attributeType="String"/>
-        <attribute name="timezones" attributeType="Transformable"/>
+        <attribute name="timezones" attributeType="Transformable" valueTransformerName="[String]" customClassName="[String]"/>
     </entity>
     <elements>
         <element name="Country" positionX="-63" positionY="-18" width="128" height="224"/>

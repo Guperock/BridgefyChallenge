@@ -32,6 +32,7 @@ extension BleInteractor: BlePresenterToInteractor {
     
     func couldAddPeripheral(identifier: String) -> Bool {
         
+        //Validate if periphera has been added
         guard !self.peripheralsFetched.contains(where: {$0 == identifier}) else {
             return false
         }

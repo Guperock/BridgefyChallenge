@@ -46,7 +46,6 @@ class BleViewController: UIViewController {
             centralManager.scanForPeripherals(withServices: nil, options: nil)
             self.presenter?.initScan()
         }
-       
     
     }
     

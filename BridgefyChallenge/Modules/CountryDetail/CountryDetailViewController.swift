@@ -33,15 +33,14 @@ class CountryDetailViewController: UIViewController {
         self.cltBorders.cnsWidth = self.cnsCollectionWidth
         self.presenter?.getCountryDetail()
         
-        //self.navigationItem.backButtonTitle = "regresae"
-        //self.parent?.navigationItem.backBarButtonItem?.tintColor = .getAssentColor()
+        // Remove this if when add back icon to assets
         if #available(iOS 13.0, *) {
             self.navigationItem.setLeftBarButton(UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(onClickBack)), animated: true)
             self.navigationItem.leftBarButtonItem?.tintColor = .getAssentColor()
         }
-        // Do any additional setup after loading the view.
     }
     
+    ///Func to insert timezones into the stackview or hide if array is empty
     private func addTimezones(timezones: [String]) {
         
         guard !timezones.isEmpty else {
@@ -93,6 +92,7 @@ class CountryDetailViewController: UIViewController {
 
 extension CountryDetailViewController: CountryDetailPresenterToView {
     func setCountryDetail(countryDetail: CountryDetail, isLocalData: Bool) {
+        // Here set all info to UI
         if let image = UIImage(named: countryDetail.alpha3Code) {
             self.imvMap.image = image
         }
@@ -137,6 +137,7 @@ extension CountryDetailViewController: CountryDetailPresenterToView {
         
         self.addTimezones(timezones: countryDetail.timezones)
         
+        //Request download image of flag
         self.presenter?.getFlagImage()
         
         if isLocalData {

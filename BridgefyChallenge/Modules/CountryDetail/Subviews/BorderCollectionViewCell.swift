@@ -20,8 +20,6 @@ class BorderCollectionViewCell: UICollectionViewCell {
         self.lblCountryName.text = Locale(identifier: "en_US").localizedString(forRegionCode: countryCode)
         self.lblFlag.text = IsoCountries.allCountries.first(where: {$0.alpha3 == countryCode})?.flag 
         
-        
-    
     }
 
 }

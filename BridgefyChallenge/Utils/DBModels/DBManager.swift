@@ -20,6 +20,7 @@ class DBManager {
         return container
     }()
     
+    ///Singleton to use DB functions
     static let shared = DBManager()
     
     var context: NSManagedObjectContext {
@@ -30,12 +31,7 @@ class DBManager {
     
     private init(){ }
     
-    /*
-    func getContext() -> NSManagedObjectContext {
-        return persistanceContainer.viewContext
-    }
- */
-    
+    ///Return TRUE if country detail has been saved o FALSE if error happend or the country exist in the DB previously
     func storeCountryDetail(countryDetail: CountryDetail, alpha2Code: String) -> Bool {
         guard let entity = NSEntityDescription.entity(forEntityName: Country.entityName, in: self.context) else {
             return false
@@ -49,6 +45,7 @@ class DBManager {
         return countryDB.save(countryDetail: countryDetail, alpha2Code: alpha2Code)
     }
     
+    ///Return TRUE if country detail has been deleted from DB o FALSE if error happend
     func removeCountryDetail(countryAlpha2Code: String) -> Bool {
         guard let entity = NSEntityDescription.entity(forEntityName: Country.entityName, in: self.context) else {
             return false
@@ -58,6 +55,7 @@ class DBManager {
         return countryDB.delete(alpha2Code: countryAlpha2Code)
     }
     
+    ///Return country detail if exist in DB
     func getCountryDetal(alpha2Code: String) -> CountryDetail? {
         
         guard let entity = NSEntityDescription.entity(forEntityName: Country.entityName, in: self.context) else {

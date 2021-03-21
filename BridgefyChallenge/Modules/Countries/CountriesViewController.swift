@@ -19,6 +19,7 @@ class CountriesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Setup UI
         self.srcBar.delegate = self
         self.tblCountries.register(UINib(nibName: "CountriesTableViewCell", bundle: .main), forCellReuseIdentifier: CountriesTableViewCell.idCell)
         self.tblCountries.dataSource = self

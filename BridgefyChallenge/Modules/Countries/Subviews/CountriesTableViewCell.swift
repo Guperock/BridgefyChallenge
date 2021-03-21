@@ -15,19 +15,7 @@ class CountriesTableViewCell: UITableViewCell {
     @IBOutlet weak var lblCountryCodes: UILabel!
     @IBOutlet weak var lblEmojiFlag: UILabel!
     
-    /*
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
- */
-    
+  
     func setupCell(withCountry country: BasicCountry) {
         self.lblCountryName.text = country.name
         self.lblCountryCodes.text = "\(country.alpha2Code)/\(country.alpha3Code)"
