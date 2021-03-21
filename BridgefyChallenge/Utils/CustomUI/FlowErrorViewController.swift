@@ -11,6 +11,7 @@ protocol FlowErrorViewControllerDelegate: class {
     func didFinishError()
 }
 
+///This is a class to show error when service fails and dont could continue with the flow
 class FlowErrorViewController: UIViewController {
     
     let lblMessage = UILabel()
@@ -31,7 +32,6 @@ class FlowErrorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.buildUI()
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidDisappear(_ animated: Bool) {

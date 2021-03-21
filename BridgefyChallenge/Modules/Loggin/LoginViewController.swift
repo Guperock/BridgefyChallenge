@@ -25,6 +25,7 @@ class LoginViewController: UIViewController {
 
     @IBAction func onLoginClicked(_ sender: Any) {
         
+        // Make basic validations to email
         guard let email = self.txfEmail.text,
               !email.isEmpty  else {
             self.showAlert(message: "You must enter email field")
@@ -72,6 +73,7 @@ extension LoginViewController: UITextFieldDelegate {
             return
         }
         
+        // Make basic validations to email
         if !email.contains("@") || !email.contains(".") {
             self.showAlert(message: "This email dont is valid. ")
         }

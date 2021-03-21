@@ -16,6 +16,7 @@ class GenericBasicService {
                                        "x-rapidapi-host": "restcountries-v1.p.rapidapi.com"])
     
     
+    ///Generic func to consume service with metod GET and  codable
     func get < T : Codable >(url: String, expectedResponse: T.Type, completionHandler: @escaping (Result< T, GenericErrorService >) -> Void) {
         AF.request(url, method: .get,headers: headers).responseJSON { (response) in
             switch response.result {
@@ -49,7 +50,7 @@ class GenericBasicService {
         }
     }
     
-    
+    ///Generic func to download image from url
     func getImage(url: String, completionHandler: @escaping (Result<UIImage,GenericErrorService>) -> Void) {
         AF.request(url).responseData { (response) in
             switch response.result {
@@ -67,7 +68,7 @@ class GenericBasicService {
     }
 }
 
-
+/// Enum to service management  errors
 enum GenericErrorService: Error {
     case parseJSONError
     case serviceError

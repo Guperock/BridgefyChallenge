@@ -15,6 +15,7 @@ class  LoginInteractor {
 extension LoginInteractor: LoginPresenterToInteractor {
     func validateCredentials(email: String, password: String) {
         
+        // Simulate service request
         let timeRandom = Double.random(in: 2...20)/10
         
         Timer.scheduledTimer(withTimeInterval: timeRandom, repeats: false) { (_) in

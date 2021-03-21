@@ -24,10 +24,12 @@ class CountryDetailInteractor {
 extension CountryDetailInteractor: CountryDetailPresenterToInteractor {
     
     func retriveCountryDetail() {
+        // Try get countrydetail from DB
         if let countryDetail = DBManager.shared.getCountryDetal(alpha2Code: self.country2Code) {
             self.countryDetail = countryDetail
             self.presenter?.setCountryDetail(countryDetail: countryDetail, isLocalData: true)
         }else {
+            // If dont have the country detail in the DB try get it of the service
             self.service.get(url: service.basicURL + "alpha/" + country2Code, expectedResponse: CountryDetail.self) { [weak self] (result) in
                 switch result {
                 case .success(let countryDetail):
@@ -41,6 +43,7 @@ extension CountryDetailInteractor: CountryDetailPresenterToInteractor {
     }
     
     func retriveFlagImage() {
+        // Try download image from url
         self.service.getImage(url:"https://flagpedia.net/data/flags/w1160/" + country2Code.lowercased() + ".png") { (result) in
             switch result {
             case .success(let image):
@@ -52,6 +55,7 @@ extension CountryDetailInteractor: CountryDetailPresenterToInteractor {
     }
     
     func storeCountryDetailInDB() {
+        //Save current country detail in DB
         guard let countryDetail = self.countryDetail else {
             return
         }
@@ -64,6 +68,7 @@ extension CountryDetailInteractor: CountryDetailPresenterToInteractor {
     }
     
     func removeCountryDetail() {
+        //Delete current country detail in DB
         guard DBManager.shared.removeCountryDetail(countryAlpha2Code: self.country2Code) else {
             return
         }

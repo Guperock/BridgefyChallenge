@@ -10,6 +10,7 @@ import UIKit.UILabel
 
 extension UILabel {
     
+    ///Return the namount seoarated with ( , )
     func decimalFormatter(stringToApplyFormat: Int ){
         let NSFormater = NumberFormatter()
         NSFormater.numberStyle = .decimal
