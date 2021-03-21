@@ -12,7 +12,8 @@ class TabContainerRouter {
     
     static func createTabContainer() -> UIViewController {
         let firstView = CountriesRouter.createCountriesModule()
-        let view = TabContainerViewController(firstView: firstView, secondView: UIViewController())
+        let secondView = BleRouter.createBleMoudule()
+        let view = TabContainerViewController(firstView: firstView, secondView: secondView)
         let navController = UINavigationController(rootViewController: view)
         return navController
     }

@@ -23,6 +23,8 @@ class CountryDetailViewController: UIViewController {
     @IBOutlet weak var lblCurrency: UILabel!
     @IBOutlet weak var cltBorders: BordersCollectionView!
     @IBOutlet weak var cnsCollectionWidth: NSLayoutConstraint!
+    @IBOutlet weak var vBorders: FloatinView!
+    @IBOutlet weak var vTimezones: FloatinView!
     
     var presenter: CountryDetailViewToPresenter?
     
@@ -42,15 +44,20 @@ class CountryDetailViewController: UIViewController {
     
     private func addTimezones(timezones: [String]) {
         
-        var fontSize = 22  //timezones.count > 6 ? 18:22
+        guard !timezones.isEmpty else {
+            self.vTimezones.isHidden = true
+            return
+        }
+        
+        var fontSize = 20
         
         switch timezones.count {
         case 1...6:
-            fontSize = 22
+            fontSize = 20
         case 7,8:
-            fontSize = 18
+            fontSize = 16
         default:
-            fontSize = 14
+            fontSize = 12
         }
         
         for timezone in timezones {
@@ -58,18 +65,34 @@ class CountryDetailViewController: UIViewController {
             lblTimezone.text = timezone.trimmingCharacters(in: .letters)
             lblTimezone.font = .systemFont(ofSize: CGFloat(fontSize))
             lblTimezone.textColor = .lightGray
+            lblTimezone.textAlignment = .center
             self.stvTimeZones.addArrangedSubview(lblTimezone)
         }
+    }
+    
+    private func showAlertDialog(message: String) {
+        let alert = UIAlertController(title: "Warning", message: message, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
     }
 
     @objc private func onClickBack(){
         self.presenter?.getOutFromDetail()
     }
     
+    @objc private func onSaveClicked() {
+        self.presenter?.saveCountryDetail()
+    }
+    
+    @objc private func onDeleteClicked() {
+        self.presenter?.deleteCountryDetail()
+    }
+    
 }
 
 extension CountryDetailViewController: CountryDetailPresenterToView {
-    func setCountryDetail(countryDetail: CountryDetail) {
+    func setCountryDetail(countryDetail: CountryDetail, isLocalData: Bool) {
         if let image = UIImage(named: countryDetail.alpha3Code) {
             self.imvMap.image = image
         }
@@ -105,11 +128,24 @@ extension CountryDetailViewController: CountryDetailPresenterToView {
             self.lblCurrency.text = fullCurrencyName
         }
         
-        self.cltBorders.setBordersData(bordersData: countryDetail.borders)
+        if countryDetail.borders.isEmpty {
+            self.vBorders.isHidden = true
+        }else {
+            self.cltBorders.setBordersData(bordersData: countryDetail.borders)
+        }
+        
         
         self.addTimezones(timezones: countryDetail.timezones)
         
         self.presenter?.getFlagImage()
+        
+        if isLocalData {
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Delete", style: .plain, target: self, action: #selector(onDeleteClicked))
+        }else {
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(onSaveClicked))
+        }
+        
+        self.navigationItem.rightBarButtonItem?.tintColor = .getAssentColor()
         
     }
     
@@ -117,4 +153,27 @@ extension CountryDetailViewController: CountryDetailPresenterToView {
         self.imvFlag.image = image
     }
     
+    func didCountryDetailSaved() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Delete", style: .plain, target: self, action: #selector(onDeleteClicked))
+        self.navigationItem.rightBarButtonItem?.tintColor = .getAssentColor()
+        self.showAlertDialog(message: "The country detail has been saved")
+    }
+    
+    func didCountryDetailDeleted() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(onSaveClicked))
+        self.navigationItem.rightBarButtonItem?.tintColor = .getAssentColor()
+        self.showAlertDialog(message: "The country detail has been deleted")
+    }
+    
+    func showErrorMessage(message: String) {
+        let errorVC = FlowErrorViewController(message: message, delegate: self)
+        self.present(errorVC, animated: true, completion: nil)
+    }
+    
+}
+
+extension CountryDetailViewController: FlowErrorViewControllerDelegate {
+    func didFinishError() {
+        self.presenter?.getOutFromDetail()
+    }
 }

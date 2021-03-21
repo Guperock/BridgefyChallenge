@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="BridgefyChallenge" customModuleProvider="target">
             <connections>
+                <outlet property="actIndicator" destination="q1a-Fd-LzJ" id="86b-ac-YaU"/>
                 <outlet property="btnLogin" destination="cgJ-Se-mTZ" id="XVz-AT-i7Q"/>
                 <outlet property="txfEmail" destination="5zG-VJ-y8M" id="s1Q-UX-WWC"/>
                 <outlet property="txfPassword" destination="nhG-Fw-n04" id="vPF-BP-Utx"/>
@@ -57,6 +58,10 @@
                         <action selector="onLoginClicked:" destination="-1" eventType="touchUpInside" id="lNe-Hf-Kke"/>
                     </connections>
                 </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="q1a-Fd-LzJ">
+                    <rect key="frame" x="197" y="800.5" width="20" height="20"/>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -67,6 +72,8 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cgJ-Se-mTZ" secondAttribute="trailing" constant="24" id="HYd-XV-WeC"/>
                 <constraint firstItem="cgJ-Se-mTZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="KUj-BI-MHe"/>
                 <constraint firstItem="nhG-Fw-n04" firstAttribute="top" secondItem="5zG-VJ-y8M" secondAttribute="bottom" constant="20" id="LRL-Xb-93c"/>
+                <constraint firstItem="cgJ-Se-mTZ" firstAttribute="centerY" secondItem="q1a-Fd-LzJ" secondAttribute="centerY" id="LVJ-wv-rkK"/>
+                <constraint firstItem="cgJ-Se-mTZ" firstAttribute="centerX" secondItem="q1a-Fd-LzJ" secondAttribute="centerX" id="N0n-Br-gw3"/>
                 <constraint firstItem="cgJ-Se-mTZ" firstAttribute="leading" secondItem="nhG-Fw-n04" secondAttribute="leading" id="PcK-60-Ws5"/>
                 <constraint firstItem="9Gs-fY-mUf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XIc-CP-Snw"/>
                 <constraint firstItem="nhG-Fw-n04" firstAttribute="leading" secondItem="5zG-VJ-y8M" secondAttribute="leading" id="XVG-xh-e7j"/>
@@ -81,7 +88,7 @@
     <resources>
         <image name="Icon" width="100" height="100"/>
         <namedColor name="accent_color">
-            <color red="0.93300002813339233" green="0.36100000143051147" blue="0.27099999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.93333333333333335" green="0.36078431372549019" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

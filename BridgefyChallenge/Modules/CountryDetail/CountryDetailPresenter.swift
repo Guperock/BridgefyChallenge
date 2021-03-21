@@ -14,7 +14,6 @@ class CountryDetailPresenter {
     var interactor: CountryDetailPresenterToInteractor?
     var router: CountryDetailPresenterToRouter?
     
-    
 }
 
 extension CountryDetailPresenter: CountryDetailViewToPresenter {
@@ -30,16 +29,36 @@ extension CountryDetailPresenter: CountryDetailViewToPresenter {
     func getOutFromDetail() {
         self.router?.goToPreviewModule()
     }
+    
+    func saveCountryDetail() {
+        self.interactor?.storeCountryDetailInDB()
+    }
+    
+    func deleteCountryDetail() {
+        self.interactor?.removeCountryDetail()
+    }
 }
 
 extension CountryDetailPresenter: CountryDetailInteractorToPresenter {
     
-    func setCountryDetail(countryDetail: CountryDetail) {
-        self.view?.setCountryDetail(countryDetail: countryDetail)
+    func didRetriveCountryDetailError(message: String) {
+        self.view?.showErrorMessage(message: message)
+    }
+    
+    
+    func setCountryDetail(countryDetail: CountryDetail, isLocalData: Bool) {
+        self.view?.setCountryDetail(countryDetail: countryDetail, isLocalData: isLocalData)
     }
     
     func setFlagImage(image: UIImage) {
         self.view?.showFlagImage(image: image)
     }
     
+    func didCountryDetailSaved() {
+        self.view?.didCountryDetailSaved()
+    }
+    
+    func didCountryDetailDeleted() {
+        self.view?.didCountryDetailDeleted()
+    }
 }

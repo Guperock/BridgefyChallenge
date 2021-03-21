@@ -8,14 +8,5 @@ target 'BridgefyChallenge' do
   # Pods for BridgefyChallenge
   pod 'IQKeyboardManagerSwift', '6.3.0'
   pod 'Alamofire'
-	
-  target 'BridgefyChallengeTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'BridgefyChallengeUITests' do
-    # Pods for testing
-  end
 
 end

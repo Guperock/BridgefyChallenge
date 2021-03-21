@@ -27,7 +27,7 @@ extension CountriesInteractor: CountriesPresenterToInteractor {
             case .success(let allCountries):
                 self?.allCountries = allCountries.sorted(by: {$0.name < $1.name })
             case .failure(let error):
-                print(error.localizedDescription)
+                self?.presenter?.didRetriveCountriesFails(message: error.errorDescription)
             }
         }
     }

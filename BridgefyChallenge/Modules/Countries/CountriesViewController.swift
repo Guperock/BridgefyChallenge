@@ -13,13 +13,12 @@ class CountriesViewController: UIViewController {
     @IBOutlet weak var tblCountries: UITableView!
     
     private var countriesData: [CountriesGroup] = []
+    private var isGroup = false
     
     var presenter: CountriesViewToPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.parent?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Group", style: .plain, target: self, action: #selector(onGroupClicked))
-        self.parent?.navigationItem.rightBarButtonItem?.tintColor = .getAssentColor()
         self.srcBar.delegate = self
         self.tblCountries.register(UINib(nibName: "CountriesTableViewCell", bundle: .main), forCellReuseIdentifier: CountriesTableViewCell.idCell)
         self.tblCountries.dataSource = self
@@ -28,11 +27,30 @@ class CountriesViewController: UIViewController {
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if isGroup {
+            addUngroupButton()
+        }else{
+            addGroupButton()
+        }
+    }
+    
+    private func addGroupButton() {
+        self.parent?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Group", style: .plain, target: self, action: #selector(onGroupClicked))
+        self.parent?.navigationItem.rightBarButtonItem?.tintColor = .getAssentColor()
+    }
+    
+    private func addUngroupButton(){
+        self.parent?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Ungroup", style: .plain, target: self, action: #selector(self.onUngroupClicked))
+        self.parent?.navigationItem.rightBarButtonItem?.tintColor = .getAssentColor()
+    }
+    
     @objc private func onGroupClicked() {
+        self.isGroup = true
         
         UIView.animate(withDuration: 0.1) {
-            self.parent?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Ungroup", style: .plain, target: self, action: #selector(self.onUngroupClicked))
-            self.parent?.navigationItem.rightBarButtonItem?.tintColor = .getAssentColor()
+            self.addUngroupButton()
             self.srcBar.text = ""
             self.srcBar.resignFirstResponder()
             self.srcBar.isHidden = true
@@ -43,9 +61,11 @@ class CountriesViewController: UIViewController {
     }
     
     @objc private func onUngroupClicked() {
+        
+        self.isGroup = false
+        
         UIView.animate(withDuration: 0.1) {
-            self.parent?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Group", style: .plain, target: self, action: #selector(self.onGroupClicked))
-            self.parent?.navigationItem.rightBarButtonItem?.tintColor = .getAssentColor()
+            self.addGroupButton()
             self.srcBar.isHidden = false
         }
         self.presenter?.ungroupContries()
@@ -88,6 +108,12 @@ extension CountriesViewController: CountriesPresenterToView {
     func showCountries(countriesGroups: [CountriesGroup]) {
         self.countriesData = countriesGroups
         self.tblCountries.reloadData()
+    }
+    
+    func showErrorMessage(message: String) {
+        let alertVC = UIAlertController(title: "Warning", message: message, preferredStyle: .actionSheet)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertVC, animated: true, completion: nil)
     }
 }
 

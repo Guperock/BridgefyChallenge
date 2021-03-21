@@ -71,4 +71,16 @@ class GenericBasicService {
 enum GenericErrorService: Error {
     case parseJSONError
     case serviceError
+    
+    
+    var errorDescription: String {
+        get{
+            switch self {
+            case .parseJSONError:
+                return "We could not parse the response."
+            case .serviceError:
+                return "We could not connect with the server."
+            }
+        }
+    }
 }

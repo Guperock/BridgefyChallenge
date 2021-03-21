@@ -39,5 +39,9 @@ extension CountriesPresenter: CountriesInteractorToPresenter {
     func updateCountries(countriesGroups: [CountriesGroup]) {
         self.view?.showCountries(countriesGroups: countriesGroups)
     }
+    
+    func didRetriveCountriesFails(message: String) {
+        self.view?.showErrorMessage(message: message)
+    }
 
 }

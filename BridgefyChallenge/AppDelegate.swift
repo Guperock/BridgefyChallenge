@@ -23,6 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        do {
+            try DBManager.shared.context.save()
+        }catch let error {
+            print(">>>>> Error to save DB changes: " + error.localizedDescription )
+        }
+    }
 
 
 }

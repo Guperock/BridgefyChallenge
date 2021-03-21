@@ -17,6 +17,7 @@ protocol CountriesViewToPresenter: class {
 
 protocol CountriesPresenterToView: class {
     func showCountries(countriesGroups: [CountriesGroup])
+    func showErrorMessage(message: String)
 }
 
 protocol CountriesPresenterToInteractor: class {
@@ -29,6 +30,7 @@ protocol CountriesPresenterToInteractor: class {
 
 protocol CountriesInteractorToPresenter: class {
     func updateCountries(countriesGroups: [CountriesGroup])
+    func didRetriveCountriesFails(message: String)
 }
 
 protocol CountriesPresenterToRouter: class {
